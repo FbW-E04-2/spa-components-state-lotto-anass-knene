@@ -15,18 +15,21 @@ export default class Circles extends Component {
 
   pushNumbers = (counter) => {
     let emptyArr = [];
-    let randomGenerator = (num) => {
-      return parseInt(Math.random() * num + 1);
+    let randomGenerator = () => {
+      return Math.floor(Math.random() * 49) + 1;
     };
-    while (counter) {
-      let randomNum = randomGenerator(49);
-      while (emptyArr.indexOf(randomNum) !== -1) {
-        randomNum = randomGenerator(49);
+
+    let firstNumber = randomGenerator();
+    emptyArr.push(firstNumber); // empty arr contains a number
+    for (let i = 0; i < 5; i++) {
+      let num = randomGenerator();
+
+      while (emptyArr.includes(num)) {
+        num = randomGenerator();
       }
-      emptyArr.push(randomNum);
-      counter--;
+      emptyArr.push(num);
     }
-    emptyArr[emptyArr.length] = randomGenerator(10);
+
     return emptyArr;
   };
 
