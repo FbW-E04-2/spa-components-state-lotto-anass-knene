@@ -1,0 +1,30 @@
+.circle {
+  height: 150px;
+  width: 150px;
+  border: 2px solid skyblue;
+  display: inline-block;
+  margin: 20px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 4rem;
+}
+p[key="6"] {
+  background-color: rgb(138, 210, 238);
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 1.6rem;
+}
+p {
+  margin: 30px;
+}
+button {
+  font-size: 2rem;
+  border: solid 2px black;
+  border-radius: 10px;
+}
+button:hover {
+  border: 2px solid skyblue;
+}
