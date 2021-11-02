@@ -139,7 +139,7 @@ export default function Circles() {
       <h1>LOTTO 6/49</h1>
       <h2>Generating lucky numbers</h2>
 
-      {this.state.numbers.map((num, i) => {
+      {numbers.map((num, i) => {
         return (
           <div className="circle" key={i}>
             <p>{num}</p>
